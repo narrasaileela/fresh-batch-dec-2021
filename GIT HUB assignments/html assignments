@@ -1,0 +1,217 @@
+sainarra@LIN80033917 MINGW64 /c/Assignments
+$ git branch --
+fatal: not a git repository (or any of the parent directories): .git
+
+sainarra@LIN80033917 MINGW64 /c/Assignments
+$ git init
+Initialized empty Git repository in C:/Assignments/.git/
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ touch readme.txt
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git add readme.txt
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   readme.txt
+
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git commit -m ' information about assignments'
+[master (root-commit) 8d9d76a]  information about assignments
+ Committer: N A R R A <s-a-i-l-e-e-l-a.n-a-r-r-a@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.txt
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git branch --alpha
+error: unknown option `alpha'
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track           set up tracking mode (see git-pull(1))
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --list            list branch names
+    --show-current        show current branch name
+    --create-reflog       create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --format <format>     format to use for the output
+
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git branch htmlassignments
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git checkout htmlassignments
+Switched to branch 'htmlassignments'
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (htmlassignments)
+$ git add C:\Assignments
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (htmlassignments)
+$ git status
+On branch htmlassignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (alpha)
+$ git commit -m ' html for hello world'
+[alpha 45a671a]  html for hello world
+ Committer: N A R R A <s-a-i-l-e-e-l-a.n-a-r-r-a@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (htmlassignments)
+$ git status
+On branch htmlassignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (htmlassignments)
+$ git add C:\Assignments
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (htmlassignments)
+$ git status
+On branch htmlassignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (htmlassignments)
+$ git commit -m ' changing backgroung color to red'
+[alpha 7432f2c]  changing backgroung color to red
+ Committer: N A R R A <s-a-i-l-e-e-l-a.n-a-r-r-a@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (htmlassignments)
+$ git branch master
+fatal: A branch named 'master' already exists.
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (htmlassignments)
+$ git checkout master
+Switched to branch 'master'
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git merge htmlassignments
+Updating 8d9d76a..7432f2c
+Fast-forward
+ index.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git branch -d htmlassignments
+Deleted branch htmlassignments(was 7432f2c).
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git branch -d htmlassignments
+Deleted branch htmlassignments (was 7432f2c).
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git branch -d htmlassignments
+Deleted branch htmlassignments (was 7432f2c).
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)

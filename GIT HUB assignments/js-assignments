@@ -1,0 +1,144 @@
+sainarra@LIN80033917 MINGW64 /c/assignment (master|MERGING)
+$ git checkout master
+Already on 'master'
+
+sainarra@LIN80033917 MINGW64 /c/assignment (master)
+$ git branch js-assignments
+
+sainarra@LIN80033917 MINGW64 /c/assignment (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+sainarra@LIN80033917 MINGW64 /c/assignment (js-assignments)
+$ git add C:\assignment
+
+sainarra@LIN80033917 MINGW64 /c/assignment (js-assignments)
+$ git status
+On branch js-assignments
+nothing to commit, working tree clean
+
+sainarra@LIN80033917 MINGW64 /c/assignment (js-assignments)
+$ git status
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sainarra@LIN80033917 MINGW64 /c/assignment (js-assignments)
+$ git add C:\assignment
+
+sainarra@LIN80033917 MINGW64 /c/assignment (js-assignments)
+$ git commit -m
+error: switch `m' requires a value
+'
+sainarra@LIN80033917 MINGW64 /c/assignment (js-assignments)
+$ git commit -m ' changing the operator'
+[js-assignments ca179fc]  changing the operator
+ Committer: N A R R A <s-a-i-l-e-e-l-a.n-a-r-r-a@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+sainarra@LIN80033917 MINGW64 /c/assignment (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+sainarra@LIN80033917 MINGW64 /c/assignment (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sainarra@LIN80033917 MINGW64 /c/assignment (master)
+$ git add C:\assignment
+
+sainarra@LIN80033917 MINGW64 /c/assignment (master)
+$ git commit -m ' changing the  operator from + to -'
+[master bd9697e]  changing the  operator from + to -
+ Committer: N A R R A <s-a-i-l-e-e-l-a.n-a-r-r-a@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+sainarra@LIN80033917 MINGW64 /c/assignment (master)
+$
+
+sainarra@LIN80033917 MINGW64 /c/assignment (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+sainarra@LIN80033917 MINGW64 /c/assignment (js-assignments)
+$ git status
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sainarra@LIN80033917 MINGW64 /c/assignment (js-assignments)
+$ git add C:\assignment
+
+sainarra@LIN80033917 MINGW64 /c/assignment (js-assignments)
+$ git commit -m ' replacing the - operator with * operator'
+[js-assignments aea7fdf]  replacing the - operator with * operator
+ Committer: N A R R A <s-a-i-l-e-e-l-a.n-a-r-r-a@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+git merge js-assignments
+Updating 8d9d76a..7432f2c
+auto-merging
+ js-assignments| 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 js-assignments
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git branch -d js-assignmens
+Deleted branch js-assignments (was 7432f2c).
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git status
+On branch master
+nothing to commit, working tree clean

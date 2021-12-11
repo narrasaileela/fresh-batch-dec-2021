@@ -1,0 +1,183 @@
+sainarra@LIN80033917 MINGW64 /c/project_dir
+$ git init
+Initialized empty Git repository in C:/project_dir/.git/
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ touch index.html
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git add C:\project_dir
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git commit -m ' first version of html file'
+[master (root-commit) c31252a]  first version of html file
+ Committer: N A R R A <s-a-i-l-e-e-l-a.n-a-r-r-a@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ touch info.txt
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ touch .gitignore
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git add C:\project_dir
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        modified:   index.html
+
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git commit -m ' styling html form'
+[master 4712959]  styling html form
+ Committer: N A R R A <s-a-i-l-e-e-l-a.n-a-r-r-a@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 10 insertions(+)
+ create mode 100644 .gitignore
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git log
+commit 47129597cb13fccec8cdeaf7cbfd414e4b90a8e3 (HEAD -> master)
+Author: N A R R A <s-a-i-l-e-e-l-a.n-a-r-r-a@capgemini.com>
+Date:   Sat Dec 11 14:47:36 2021 +0530
+
+     styling html form
+
+commit c31252a24fd2225a0914e5d63870cbfe9799c193
+Author: N A R R A <s-a-i-l-e-e-l-a.n-a-r-r-a@capgemini.com>
+Date:   Sat Dec 11 14:37:13 2021 +0530
+
+     first version of html file
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git restore index.html
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git add index.html
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git commit -m 'background color changes to orange'
+[master e034b46] background color changes to orange
+ Committer: N A R R A <s-a-i-l-e-e-l-a.n-a-r-r-a@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$ git restore index.html
+
+sainarra@LIN80033917 MINGW64 /c/project_dir (master)
+$

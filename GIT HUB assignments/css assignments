@@ -1,0 +1,124 @@
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git branch --
+* master
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git branch css assighnments
+fatal: Not a valid object name: 'assighnments'.
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git branch css assignments
+fatal: Not a valid object name: 'assignments'.
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git branch css assign
+fatal: Not a valid object name: 'assign'.
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git branch cssassignments
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git checkout cssassignments
+Switched to branch 'cssassignments'
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (cssassignments)
+$ git status
+On branch cssassignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        style.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (cssassignments)
+$ git add C:\Assignments
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (cssassignments)
+$ git status
+On branch cssassignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   style.css
+
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (cssassignments)
+$ git commit -m ' adding style to html form'
+[cssassignments 7a056e0]  adding style to html form
+ Committer: N A R R A <s-a-i-l-e-e-l-a.n-a-r-r-a@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 60 insertions(+)
+ create mode 100644 style.css
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (cssassignments)
+$ git status
+On branch cssassignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   style.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (cssassignments)
+$ git add C:\Assignments
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (cssassignments)
+$ git status
+On branch cssassignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   style.css
+
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (cssassignments)
+$ git commit -m 'color changed into red'
+[cssassignments 60c63de] color changed into red
+ Committer: N A R R A <s-a-i-l-e-e-l-a.n-a-r-r-a@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (cssassignments)
+$ git checkout master
+Switched to branch 'master'
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git merge cssassignments
+Updating 7432f2c..60c63de
+Fast-forward
+ style.css | 60 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 60 insertions(+)
+ create mode 100644 style.css
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git branch -d css assignments
+error: branch 'css' not found.
+error: branch 'assignments' not found.
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$ git branch -d cssassignments
+Deleted branch cssassignments (was 60c63de).
+
+sainarra@LIN80033917 MINGW64 /c/Assignments (master)
+$
