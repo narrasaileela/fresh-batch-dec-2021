@@ -1,0 +1,120 @@
+1.//
+
+class A{  
+ private static A obj;  
+ private A(){}  
+   
+ public static A getA(){  
+   if (obj == null){  
+      synchronized(Singleton.class){  
+        if (obj == null){  
+            obj = new Singleton();//instance will be created at request time  
+        }  
+    }              
+    }  
+  return obj;  
+ }  
+  
+ 
+
+
+
+
+2.//
+
+
+void salary() 
+   {
+	   
+   System.out.println("print the salary of the employees");
+   }
+}
+		//Creating child classes.  
+		class manager extends employee
+		{  
+		void salary()
+		{
+		System.out.println("print the salary of the manager");
+		}  
+		}
+		
+		class labour extends employee
+		{  
+		void salary()
+		{
+			System.out.println("print the salary of the labour");
+		}  
+ 
+		}
+                     
+
+3 
+
+package oops;
+
+public class bankaccount {
+	
+
+			  public void totalcash(int cashdeposited, int cashcredited)
+			  {
+		      int totalcash = cashdeposited + cashcredited;
+			    System.out.println("print total cash in the bankaccount");
+			  }
+
+			public void totalcash() {
+				// TODO Auto-generated method stub
+				
+			}
+			}
+
+			class savingaccount extends bankaccount {
+			  public void cashdeposited() {
+			    System.out.println("the total cash deposited");
+			  }
+			}
+
+			class currentaccount extends bankaccount {
+			  public void cashcredited() {
+			    System.out.println("The total cash credited");
+			  }
+			}
+
+			class Main {
+				  public static void main(String[] args) {
+				    bankaccount BA= new bankaccount();  
+				    savingaccount SA = new savingaccount();  
+				    currentaccount CA = new currentaccount();
+				     BA.totalcash();
+				     SA.cashdeposited();
+				     CA.cashcredited();
+				  }
+				}
+
+
+
+5
+
+.abstract class Shape{
+abstract void draw();
+}
+class Line extends Shape{
+void draw(){system.out.println("drawing line"):}
+class Rectangle extends Shape{
+void draw(){System.out.println("drawing rectangle");}
+}
+
+class Circle1 extends Shape{
+void draw(){System.out.println("drawing circle");}
+}
+
+
+class TestAbstraction1{
+public static void main(String args[]){
+Shape s=new Cube();
+s.draw();
+Shape s=new Rectangle();
+s.draw();
+Shape s = new Line();
+s.draw();
+}
+}

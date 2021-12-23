@@ -1,0 +1,176 @@
+// 1. to find the length of the string//
+package corejava;
+
+import java.nio.file.FileSystem;
+
+public class srtinglen {
+
+	public static void main(String[] args) {
+
+			String s1="hello world";
+			System.out.println("string length is: "+s1.length());
+		
+			
+	
+		
+
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+//2. to join the two strings//
+package corejava;
+
+import java.nio.file.FileSystem;
+
+public class srtinglen {
+
+	public static <string> void main(String[] args) {
+
+			String str1="hello";
+			String str2 = " How are you";
+			String str3 = str1.concat(str2);
+			System.out.println(str3);
+
+	}
+
+}
+
+
+//3.
+
+(a) tp print the string in lower case
+
+package corejava;
+
+import java.nio.file.FileSystem;
+
+public class srtinglen {
+
+	public static <string> void main(String[] args) {
+
+			String str = "java string pool refers to collection of strings which are stored in heap memory";
+			str.toLowerCase();
+			System.out.println( str)
+
+	}
+
+}
+(b)to pront the string in upper case
+package corejava;
+
+import java.nio.file.FileSystem;
+
+public class srtinglen {
+
+	public static <string> void main(String[] args) {
+
+			String str = "java string pool refers to collection of strings which are stored in heap memory";
+			str.toUpperCase();
+			System.out.println( str);				
+
+	}
+
+}
+(c)replace all character in string with dollar sign
+
+package corejava;
+
+import java.nio.file.FileSystem;
+
+public class srtinglen {
+
+	public static <string> void main(String[] args) {
+
+			String str = "java string pool refers to collection of strings which are stored in heap memory";
+			string str2 = (string) str.replace("a" ,"$");
+			System.out.println( str2);
+		
+
+		// TODO Auto-generated method stubt
+	}
+
+}
+
+(d)check if the original string contains the word collection
+package corejava;
+
+import java.nio.file.FileSystem;
+
+public class srtinglen {
+
+	public static <string> void main(String[] args) {
+
+			String str = "java string pool refers to collection of strings which are stored in heap memory";
+			System.out.println(str.contains("collection"));
+
+	}
+
+}
+
+(e)check if the srting matches the original
+
+package corejava;
+
+import java.nio.file.FileSystem;
+
+public class srtinglen {
+
+	public static <string> void main(String[] args) {
+
+			
+	String str1 = "java string pool refers to collection of strings which are stored in heap memory";
+	 String str2 = "java string pool refers to collection of strings which are stored in heap memory";
+	
+	System.out.println(str1.compareTo(str2));
+			
+
+	}
+
+}
+
+(f) // string buffer //
+package corejava;
+
+import java.nio.ShortBuffer;
+
+public class buffer {
+
+	public static void main(String[] args) {
+		
+    StringBuffer sb=new StringBuffer("stringbuffer");
+    sb.append(" is a peer class of string");
+    System.out.println(sb);
+    StringBuffer sb1=new StringBuffer(sb);
+    sb1.append("that provides much of");
+    System.out.println(sb1);
+    StringBuffer sb2 = new StringBuffer(sb1);
+    sb2.append("functionality of strings");
+    System.out.println(sb2);	
+
+	}
+
+	private static ShortBuffer newStringbuffer(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
+// reverse the following string//
+package corejava;
+
+public class reversestring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StringBuffer sb= new StringBuffer("this method returns the reverse object on which it is called");
+        sb.reverse();
+        System.out.println(sb);
+
+	}
+
+}
+

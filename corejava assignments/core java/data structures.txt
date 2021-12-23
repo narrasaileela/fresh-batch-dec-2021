@@ -1,0 +1,276 @@
+section-1
+
+// given number is armstrong are not//
+
+public class JavaExample {
+
+    public static void main(String[] args) {
+
+        int num = 153, number, temp, total = 0;
+
+        number = num;
+        while (number != 0)
+        {
+            temp = number % 10;
+            total = total + temp*temp*temp;
+            number /= 10;
+        }
+
+        if(total == num)
+            System.out.println(num + " is an Armstrong number");
+        else
+            System.out.println(num + " is not an Armstrong number");
+    }
+}
+
+
+2. //find out all the armstrong numbers falling in range of 100-999
+   
+public class JavaExample
+{
+    public static void main(String args[])
+    {
+	int num, start, end, i, rem, temp, counter=0;
+		
+	Scanner scanner = new Scanner(System.in);
+	System.out.print("Enter the start number: ");
+	start = scanner.nextInt();
+	System.out.print("Enter the end number: ");
+	end = scanner.nextInt();
+	scanner.close();
+
+	//generate Armstrong numbers between start and end
+	for(i=start+1; i<end; i++)
+	{
+	   temp = i;
+	   num = 0;
+	   while(temp != 0)
+	   {
+		rem = temp%10;
+		num = num + rem*rem*rem;
+		temp = temp/10;
+	   }
+	   if(i == num)
+	   {
+		if(counter == 0)
+		{
+		   System.out.print("Armstrong Numbers Between "+start+" and "+end+": ");
+		}
+		   System.out.print(i + "  ");
+		   counter++;
+	   }
+	}
+	// if no Armstrong number is found
+	if(counter == 0)
+	{
+	   System.out.print("There is no Armstrong number Between "+start+" and "+end);
+	}
+    }
+}
+
+3.// find out the simple as well as the compound interest of supplied value
+
+class simplecompound
+{
+    public static void main (String argu[ ])
+{
+    double pr, rate, t, sim,com;
+    Scanner sc=new Scanner (System. in);
+    System.out.println("Enter the amount:");
+    pr=sc.nextDouble();
+    System. out. println("Enter the No.of years:");
+    t=sc.nextDouble();
+    System. out. println("Enter the Rate of  interest");
+    rate=sc.nextDouble();
+    simple=(pr * t * rate)/100;
+    compound=pr * Math.pow(1.0+rate/100.0,t) - pr;
+    System.out.println("Simple Interest="+sim);
+    System.out. println("Compound Interest="+com);
+   }
+}
+
+4.//supply marks of three subjects and declare the result//
+(if all subject marks greater than 60 declare pass)
+
+package corejava;
+
+import java.util.Scanner;
+
+public class ifstatements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+
+		int marks = 60;
+
+		System.out.println("Enter your marks in three subjects...");
+
+		marks=sc.nextInt();
+
+		marks=sc.nextInt();
+
+		marks=sc.nextInt();
+
+		if(marks>=60)
+
+		System.out.println("You passed the exam.");
+
+		else
+
+		System.out.println("You have failed. Hard work is needed. ");
+}
+}
+
+
+5// income tax//
+
+package corejava;
+
+import java.util.Scanner;
+
+public class income {
+
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double tax=0,it;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter income ");
+		it=sc.nextDouble();
+		if(it<=180000)
+			tax=0;
+		else if(it<=300000)
+			tax=0.1*(it-200000);
+		else if(it<=500000)
+			tax=(0.2*(it-300000))+(0.1*100000);
+		else if(it<=1000000)
+			tax=(0.3*(it-500000))+(0.2*200000)+(0.1*100000);
+		else
+			tax=(0.4*(it-1000000))+(0.3*500000)+(0.2*200000)+(0.1*100000);
+		System.out.println("Income tax amount is "+tax);
+	}
+
+}
+
+
+6//cui based application//
+
+Scanner sc = new Scanner(System.in);
+        String sp=" ";
+        System.out.println("Enter the Username");
+        String uname = sc.nextLine();
+        if((uname.contains(sp)) || uname.length()<4){
+            System.out.println("Invalid Username");
+            return;
+        }
+
+        System.out.println("Enter the Password");
+        String upass = sc.nextLine();
+        if((upass.contains(sp)) || upass.length()<8){
+            System.out.println("Invalid Password");
+            return;
+        }
+
+        System.out.println(uname+" welcome");
+
+        System.out.println("Enter the Username");
+        String lname = sc.nextLine();
+        System.out.println("Enter the Password");
+        String lpass = sc.nextLine();
+
+        if(uname.equals(lname) && upass.equals(lpass)){
+            System.out.println("contact admin");
+        }
+        else{
+            System.out.println("Username or password Mismatch");
+        }
+
+7 //arrays//
+
+
+package corejava;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class list {
+
+	public static void main(String[] args) {
+		// TODO // creating an Empty Integer List
+        List<Integer> arr = new ArrayList<Integer>(4);
+        // using add() to initialize values
+        // [1, 2, 3, 4]
+        arr.add(5);
+        arr.add(12);
+        arr.add(14);
+        arr.add(6);
+        arr.add(78);
+        arr.add(19);
+        arr.add(1);
+        arr.add(23);
+        arr.add(26);
+        arr.add(35);
+        arr.add(37);
+        arr.add(7);
+        arr.add(52);
+        arr.add(86);
+        arr.add(47);
+        // use contains() to check if the element
+        // 2 exits or not
+        boolean ans = arr.contains(19);
+  
+        if (ans)
+            System.out.println("The list contains 19");
+        else
+            System.out.println("The list does not contains 19");
+
+	}
+
+}
+
+
+// avearge marks//
+
+package corejava;
+
+import java.util.Scanner;
+
+public class average {
+
+	public static void main(String[] args) {
+		 float eng, phy, chem ;
+		 
+	     double total, average ;
+	     
+	     Scanner op=new Scanner(System.in);
+	     
+	     /* Input marks of all five subjects */
+	     
+	     System.out.println("Enter marks of three subjects:");
+	     System.out.print("Enter marks of English subjects:");
+	     eng = op.nextFloat();
+	     System.out.print("Enter marks of physics subjects:");
+	     phy=op.nextFloat();
+	     System.out.print("Enter marks of chemistry subjects:");
+	     chem=op.nextFloat();
+	     
+	     /* Calculate total, average and percentage */
+	     
+	     total = eng + phy + chem;
+	     average = (total / 3.0);
+	    
+
+	     /* Print all results */
+	     System.out.println("Total marks ="+total);
+	     System.out.println("Average marks = "+average);
+
+
+	}
+
+}
+
+
+
+
+
