@@ -1,0 +1,158 @@
+1.arthmetic operations using Lambda
+
+package collec;
+interface Arthmetic {
+	int operations(int a,int b);
+}
+public class Lambda {
+	public static void main(String[] args) {
+		
+		Arithmetic addition = (a,b)->(a+b);
+		System.out.println("addition");
+		Arthmetic substraction = (a,b)->(a-b);
+		System.out.println("substraction");
+		Arthmetic multiplication = (a,b)->(a*b);
+		System.out.println("multiplication");
+		Arthmetic division = (a,b)->(a/b);
+		System.out.println("division");
+		
+		
+ 	
+	}
+
+}
+
+
+2.interface Order {
+public void greater(int p1, int p2);
+}
+
+
+
+public class OrderTest {
+
+	public static void main(String[] args) {
+		Order s = (p1,p2) -> {
+			if (p1> p2)
+			System.out.println(p1 + "Order is not Accepted");
+			else if (p2 > p1)
+			System.out.println(p2 + " Order is Accepted");
+			};
+			s.greater( 10000,30000);
+			}}
+
+	
+
+3. for supplier
+
+import java.time.LocalDateTime;
+import java.util.function.Supplier;
+
+public class Supplier {
+
+	public static void main(String[] args) {
+     Supplier<LocalDateTime> supplier =()->LocalDateTime.now();
+     System.out.println(supplier.get());
+	}
+
+}
+        
+
+for consumer
+
+
+import java.util.function.Consumer;
+
+public class Consumer {
+
+	public static void main(String[] args) {
+		Consumer<String>consumer=(t)-> System.out.println(t);
+		consumer.accept("Greetings");
+
+	}
+
+}
+
+
+for predicate
+
+import java.util.function.Predicate;
+
+public class Predict {
+
+	public static void main(String[] args) {
+      Predicate<Integer> predict=(c) -> {
+    	  
+    	  if(c%2==0)
+    	  {
+    		  return true;
+    	  }
+    	  else
+    	  {
+    		  return false;
+    	  }
+      
+	};
+	System.out.println(predict.test(8));
+
+}
+}                 
+	
+
+
+
+
+5.// first letter//
+
+
+import java.util.Arrays;
+import java.util.Objects;
+import java.util.stream.Collectors;
+
+public class FirstLetter {
+
+	public static void main(String[] args) {
+		String[] strArray = { "Sai", "Ram", "Alexa", "Rex", "Snoopy", "elisa", "mary" }; 
+        System.out.println(Arrays.stream(strArray) 
+                .filter(Objects::nonNull) 
+                .map(s->s.charAt(0)) 
+                .collect(Collectors.toList())); 
+    } 
+	}
+
+
+
+	
+		
+6. // replace//
+
+import java.util.ArrayList;
+import java.util.function.UnaryOperator;
+
+class Op implements UnaryOperator<String>
+{
+
+	@Override
+	public String apply(String str) {
+		// TODO Auto-generated method stub
+		return str.toUpperCase();
+	}
+	
+}
+public class Replace {
+
+	public static void main(String[] args) throws CloneNotSupportedException {
+		ArrayList<String> list = new ArrayList<>();
+	      list.add("Java");
+	      list.add("Hello");
+	      list.add("Word");
+	      list.add("apple");
+	      list.add("OpenNLP");
+	      System.out.println("Contents of the list: "+list);
+	      list.replaceAll(new Op());
+	      System.out.println("Contents of the list after replace operation: \n"+list);
+		
+
+	}
+
+}
